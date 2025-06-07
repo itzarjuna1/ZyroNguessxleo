@@ -40,7 +40,7 @@ Here's how to use the bot:
 4. **Earn Rewards**: Correct guesses earn 20 coins, and streaks (50 or 100 correct guesses) give bonus rewards (1000 or 2000 coins).
 5. **Cooldowns**: Max 1,000,000 guesses before a 4-hour cooldown.
 
-**Need more help?** Contact [Mr Zyro](https://t.me/xeno_kakarot) or join [TEAM ZYRO](https://t.me/Zyro_Network) for support!
+**Need more help?** Contact [Mr Zyro](https://t.me/MeZyro) or join [TEAM ZYRO](https://t.me/Zyro_Network) for support!
         """
         await callback_query.message.edit_text(
             text=help_text,
