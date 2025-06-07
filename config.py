@@ -1,4 +1,5 @@
 import os
+from pyrogram import filters
 
 API_ID = int(os.getenv("API_ID", "26208465"))
 API_HASH = os.getenv("API_HASH", "bd4e2fe9c30486282417cdf9a93333b2")
