@@ -1,7 +1,7 @@
 # TEAMZYRO/IMPORT/module/start.py
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import GOKU_PIC, GOKU_TEXT
+from config import *
 
 def register(app):
     @app.on_message(filters.command("start") & filters.private)
