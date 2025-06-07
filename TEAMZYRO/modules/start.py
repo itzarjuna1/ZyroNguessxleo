@@ -34,7 +34,7 @@ def register(app):
 **Help - Anime Character Guessing Bot** 🛠️
 
 Here's how to use the bot:
-1. **Join the Required Channel**: Ensure you've joined [TEAM ZYRO](https://t.me/) to use the bot.
+1. **Join the Required Channel**: Ensure you've joined [TEAM ZYRO](https://t.me/Zyro_Network) to use the bot.
 2. **Start a Game**: Use `/nguess` in one of our supported groups to start guessing anime characters.
 3. **Guess the Character**: When an image is posted, type the character's name to guess. You have 5 minutes per round!
 4. **Earn Rewards**: Correct guesses earn 20 coins, and streaks (50 or 100 correct guesses) give bonus rewards (1000 or 2000 coins).
