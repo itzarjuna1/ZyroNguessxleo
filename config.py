@@ -10,6 +10,8 @@ START_IMG = os.getenv("START_IMG", "")
 START_TEXT = """
 """
 
+not_command_filter = filters.create(lambda _, __, msg: msg.text and not msg.text.startswith('/'))
+
 COOLDOWN_PERIOD = 4 * 60 * 60
 GUESS_TIMEOUT = 5 * 60
 MAX_GUESSES = 1000000
