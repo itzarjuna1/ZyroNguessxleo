@@ -55,8 +55,8 @@ Here's how to use the bot:
     async def back_to_start_callback(client: Client, callback_query):
         keyboard = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/xeno_kakarot"),
-                InlineKeyboardButton("Update Channel 📢", url="https://t.me/PiratesMainchat")
+                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/MrZyro"),
+                InlineKeyboardButton("Update Channel 📢", url="https://t.me/Zyro_Network")
             ],
             [
                 InlineKeyboardButton("Help ❓", callback_data="help_command"),
