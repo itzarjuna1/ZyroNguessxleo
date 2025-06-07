@@ -67,7 +67,7 @@ Here's how to use the bot:
             media=InputMediaPhoto(
                 media=START_PIC,
                 caption=START_MESSAGE,
-                parse_mode="markdown"
+                parse_mode=enums.ParseMode.MARKDOWN
             ),
             reply_markup=keyboard
         )
