@@ -5,12 +5,13 @@ from cachetools import TTLCache, LRUCache
 
 API_ID = int(os.getenv("API_ID", "26208465"))
 API_HASH = os.getenv("API_HASH", "bd4e2fe9c30486282417cdf9a93333b2")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8171323642:AAHI9S8T8dzrjZUK_RiahzLVQDXmulO_lqI")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7700977444:AAFF2yZB98wlEYnOGrjjvg5IFdXPlx1ouDY")
 MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://harshmanjhi1801:webapp@cluster0.xxwc4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 GROUP_IDS = os.getenv("GROUP_IDS", "-1002056007523, -1002056007523")
 START_IMG = os.getenv("START_IMG", "")
 
 START_TEXT = """
+none
 """
 
 not_command_filter = filters.create(lambda _, __, msg: msg.text and not msg.text.startswith('/'))
