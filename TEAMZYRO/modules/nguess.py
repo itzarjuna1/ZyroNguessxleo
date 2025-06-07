@@ -73,22 +73,6 @@ async def get_random_character():
         LOGGER.error(f"Error fetching random character: {e}")
         return None
 
-async def must_join_channel(app, msg):
-    for MUST_JOIN in [MUST_JOIN_1]:
-        if not MUST_JOIN:
-            continue
-        try:
-            await app.get_chat_member(MUST_JOIN, msg.from_user.id)
-        except UserNotParticipant:
-            await msg.reply(
-                f"Please join our channel to use this command:\n\n🔹 [Join Channel](https://t.me/{MUST_JOIN_1})\n",
-                disable_web_page_preview=True
-            )
-            return False
-        except Exception as e:
-            await msg.reply(f"An error occurred while checking channel membership: {str(e)}")
-            return False
-    return True
 
 async def get_fresh_character(chat_id):
     if not hasattr(get_fresh_character, "recent_by_chat"):
@@ -154,10 +138,6 @@ def register(app):
         # Check if the group is allowed
         if chat_id not in GROUP_IDS:
             await message.reply("❌ This command only works in the main group chat!")
-            return
-
-        # Check mandatory channel join
-        if not await must_join_channel(client, message):
             return
 
         # Start a new session
