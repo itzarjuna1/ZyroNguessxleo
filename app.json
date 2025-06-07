@@ -1,0 +1,57 @@
+{
+  "name": "AnimeCharacterGuessBot",
+  "description": "An anime character guessing game bot built with Pyrogram and MongoDB",
+  "repository": "https://github.com/yourusername/your-repo-name",
+  "keywords": ["python", "telegram-bot", "pyrogram", "mongodb", "anime", "game"],
+  "env": {
+    "API_ID": {
+      "description": "Telegram API ID for the bot",
+      "value": "26208465",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegram API Hash for the bot",
+      "value": "bd4e2fe9c30486282417cdf9a93333b2",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Telegram Bot Token",
+      "value": "7700977444:AAFF2yZB98wlEYnOGrjjvg5IFdXPlx1ouDY",
+      "required": true
+    },
+    "MONGO_URL": {
+      "description": "MongoDB connection URL",
+      "value": "mongodb+srv://harshmanjhi1801:webapp@cluster0.xxwc4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+      "required": true
+    },
+    "GROUP_IDS": {
+      "description": "Comma-separated list of group IDs where bot is active",
+      "value": "-1002056007523,-1002056007523",
+      "required": true
+    },
+    "START_IMG": {
+      "description": "Start message image URL",
+      "value": "https://files.catbox.moe/6nl03c.jpg",
+      "required": false
+    },
+    "SUPPORT_CHAT": {
+      "description": "Support chat username or URL",
+      "value": "",
+      "required": false
+    },
+    "UPDATE_CHAT": {
+      "description": "Update channel username or URL",
+      "value": "",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "Owner's Telegram user ID",
+      "value": "",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
