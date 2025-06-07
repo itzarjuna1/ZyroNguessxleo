@@ -34,21 +34,6 @@
       "value": "https://files.catbox.moe/6nl03c.jpg",
       "required": false
     },
-    "SUPPORT_CHAT": {
-      "description": "Support chat username or URL",
-      "value": "",
-      "required": false
-    },
-    "UPDATE_CHAT": {
-      "description": "Update channel username or URL",
-      "value": "",
-      "required": false
-    },
-    "OWNER_ID": {
-      "description": "Owner's Telegram user ID",
-      "value": "",
-      "required": false
-    }
   },
   "buildpacks": [
     {
