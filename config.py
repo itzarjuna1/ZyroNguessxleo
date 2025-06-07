@@ -33,11 +33,6 @@ COOLDOWN_PERIOD = 4 * 60 * 60
 GUESS_TIMEOUT = 5 * 60
 MAX_GUESSES = 1000000
 
-# Rewards
-COINS_PER_CORRECT = 20
-BONUS_50 = 1000
-BONUS_100 = 2000
-
 client_ddw = AsyncIOMotorClient(MONGO_URL, maxPoolSize=10)
 db = client_ddw['hinata_waifu']
 user_collection = db['gamimg_user_collection']
@@ -46,13 +41,10 @@ collection = db['gaming_anime_characters']
 character_cache = LRUCache(maxsize=100)
 user_cache = TTLCache(maxsize=1000, ttl=3600)
 
-# Session and streak data
 ongoing_sessions = {}
 user_total_guesses = {}
 streak_data = {group_id: {"current_streak": 0, "last_correct_user": None} for group_id in GROUP_IDS}
 
-# Reaction emojis
 emojis = ["👍", "😘", "❤️", "🔥", "🥰", "🤩", "💘", "😏", "🤯", "⚡️", "🏆", "🤭", "🎉"]
 
-# Create chat filter
 chat_filter = filters.chat(GROUP_IDS)
