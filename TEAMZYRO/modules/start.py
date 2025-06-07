@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from config import *
 from pyrogram import enums
+from pyrogram.types import InputMediaPhoto
 
 def register(app):
     @app.on_message(filters.command("start") & filters.private)
