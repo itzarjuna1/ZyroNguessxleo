@@ -33,10 +33,17 @@
       "description": "Start message image URL",
       "value": "https://files.catbox.moe/6nl03c.jpg",
       "required": false
-    },
+    }
   },
   "buildpacks": [
     {
       "url": "heroku/python"
     }
-  ]
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
