@@ -4,6 +4,7 @@ import logging
 from pyrogram import Client
 from config import API_ID, API_HASH, BOT_TOKEN
 from TEAMZYRO.IMPORT.module import start, nguess, autoclear
+from TEAMZYRO import app
 
 # Setup logging
 logging.basicConfig(
