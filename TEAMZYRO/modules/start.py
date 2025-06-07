@@ -13,7 +13,8 @@ def register(app):
                 InlineKeyboardButton("Update Channel 📢", url="https://t.me/Zyro_Network")
             ],
             [
-                InlineKeyboardButton("Help ❓", callback_data="help_command")
+                InlineKeyboardButton("Help ❓", callback_data="help_command"),
+                InlineKeyboardButton("Repo 💡", url="https://github.com/MrZyro/ZyroNguess")
             ]
         ])
 
@@ -53,15 +54,23 @@ Here's how to use the bot:
     async def back_to_start_callback(client: Client, callback_query):
         keyboard = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/MrZyro"),
-                InlineKeyboardButton("Update Channel 📢", url="https://t.me/Zyro_Network")
+                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/xeno_kakarot"),
+                InlineKeyboardButton("Update Channel 📢", url="https://t.me/PiratesMainchat")
             ],
             [
-                InlineKeyboardButton("Help ❓", callback_data="help_command")
+                InlineKeyboardButton("Help ❓", callback_data="help_command"),
+                InlineKeyboardButton("Repo 💡", url="https://github.com/MrZyro/ZyroNguess")
             ]
         ])
-        await callback_query.message.edit(
-            caption=START_MESSAGE,
-            parse_mode=enums.ParseMode.MARKDOWN,
+        await callback_query.message.edit_media(
+            media=InputMediaPhoto(
+                media=START_PIC,
+                caption=START_MESSAGE,
+                parse_mode="markdown"
+            ),
             reply_markup=keyboard
         )
+        await callback_query.answer()
+
+
+
