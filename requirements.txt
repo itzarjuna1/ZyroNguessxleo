@@ -1,0 +1,4 @@
+pyrogram==2.0.106
+motor==3.3.2
+cachetools==5.3.2
+requests==2.31.0
