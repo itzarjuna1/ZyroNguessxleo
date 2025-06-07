@@ -1,5 +1,7 @@
 import os
 from pyrogram import filters
+from motor.motor_asyncio import AsyncIOMotorClient
+from cachetools import TTLCache, LRUCache
 
 API_ID = int(os.getenv("API_ID", "26208465"))
 API_HASH = os.getenv("API_HASH", "bd4e2fe9c30486282417cdf9a93333b2")
