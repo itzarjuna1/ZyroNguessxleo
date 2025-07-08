@@ -3,11 +3,12 @@ from pyrogram import filters
 from motor.motor_asyncio import AsyncIOMotorClient
 from cachetools import TTLCache, LRUCache
 
-API_ID = int(os.getenv("API_ID", "26208465"))
-API_HASH = os.getenv("API_HASH", "bd4e2fe9c30486282417cdf9a93333b2")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "7700977444:AAFF2yZB98wlEYnOGrjjvg5IFdXPlx1ouDY")
-MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://Alisha:Alisha123@cluster0.yqcpftw.mongodb.net/?retryWrites=true&w=majority")
-GROUP_IDS = [int(gid.strip()) for gid in os.getenv("GROUP_IDS", "-1002056007523, -1002056007523").split(",")]
+API_ID = int(os.getenv("API_ID", "22565342"))
+API_HASH = os.getenv("API_HASH", "75e035926f72f2f4155a6f5f6e64be03"))
+")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7591372264:AAF565h2mFwJrpzNZdBpSO6KAh-zK5hMHXs")
+MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://knight4563:knight4563@cluster0.a5br0se.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+GROUP_IDS = [int(gid.strip()) for gid in os.getenv("GROUP_IDS", "-1002881119599,-1002643544937 ").split(",")]
 START_PIC = os.getenv("START_IMG", "https://files.catbox.moe/6nl03c.jpg")
 
 START_MESSAGE = """
