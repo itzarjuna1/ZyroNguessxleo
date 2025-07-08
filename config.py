@@ -3,7 +3,7 @@ from pyrogram import filters
 from motor.motor_asyncio import AsyncIOMotorClient
 from cachetools import TTLCache, LRUCache
 
-API_ID = int(os.getenv("API_ID", "22565342")
+API_ID = int(os.getenv("API_ID","22565342"))
 API_HASH = os.getenv("API_HASH", "75e035926f72f2f4155a6f5f6e64be03")
 BOT_TOKEN = os.getenv("BOT_TOKEN", "7591372264:AAF565h2mFwJrpzNZdBpSO6KAh-zK5hMHXs")
 MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://knight4563:knight4563@cluster0.a5br0se.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
