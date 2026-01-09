@@ -1,8 +1,8 @@
 import requests
 from pymongo import MongoClient
 
-MONGO_URL = "YOUR_MONGODB_URL"
-DB_NAME = "YOUR_DB_NAME"
+MONGO_URL = "mongodb+srv://knight4563:knight4563@cluster0.a5br0se.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DB_NAME = "KNIGHT-KING"
 COLLECTION = "characters"
 
 client = MongoClient(MONGO_URL)
