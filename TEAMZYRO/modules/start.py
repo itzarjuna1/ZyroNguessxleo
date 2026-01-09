@@ -10,12 +10,12 @@ def register(app):
         # Define inline buttons
         keyboard = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/uchiha_owner"),
+                InlineKeyboardButton("ᴅᴇᴠeʟᴏᴘᴇʀ 👨‍💻", url="https://t.me/uchiha_owner"),
                 InlineKeyboardButton("Update Channel 📢", url="https://t.me/dark_musictm")
             ],
             [
-                InlineKeyboardButton("Help ❓", callback_data="help_command"),
-                InlineKeyboardButton("support 💡", url="https://t.me/snowy_hometown")
+                InlineKeyboardButton("ʜᴇʟᴘ ❓", callback_data="help_command"),
+                InlineKeyboardButton("˹ Uᴘᴘᴇʀ ᴍᴏᴏɴ ᴜᴘᴅᴀᴛᴇs ˼ 🎧", url="https://t.me/snowy_hometown")
             ]
         ])
 
@@ -30,18 +30,18 @@ def register(app):
     # Handle the Help button callback
     @app.on_callback_query(filters.regex("help_command"))
     async def help_callback(client: Client, callback_query):
-        help_text = """
+        help_text = """<blockquote>
 **Help - Anime Character Guessing Bot** 🛠️
 
-Here's how to use the bot:
-1. **Join the Required Channel**: Ensure you've joined [TEAM UCHIHA BOTS](https://t.me/dark_musictm) to use the bot.
-2. **Start a Game**: Use `/nguess` in one of our supported groups to start guessing anime characters.
-3. **Guess the Character**: When an image is posted, type the character's name to guess. You have 5 minutes per round!
-4. **Earn Rewards**: Correct guesses earn 20 coins, and streaks (50 or 100 correct guesses) give bonus rewards (1000 or 2000 coins).
-5. **Cooldowns**: Max 1,000,000 guesses before a 4-hour cooldown.
+ʜᴇʀᴇ’ꜱ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴛʜᴇ ʙᴏᴛ:
+ᴊᴏɪɴ ᴛʜᴇ ʀᴇQᴜɪʀᴇᴅ ᴄʜᴀɴɴᴇʟ: ᴇɴꜱᴜʀᴇ ʏᴏᴜ’ᴠᴇ ᴊᴏɪɴᴇᴅ  ᴛᴏ ᴜꜱᴇ ᴛʜᴇ ʙᴏᴛ.
+ꜱᴛᴀʀᴛ ᴀ ɢᴀᴍᴇ: ᴜꜱᴇ /nguess ɪɴ ᴏɴᴇ ᴏꜰ ᴏᴜʀ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ɢʀᴏᴜᴘꜱ ᴛᴏ ꜱᴛᴀʀᴛ ɢᴜᴇꜱꜱɪɴɢ ᴀɴɪᴍᴇ ᴄʜᴀʀᴀᴄᴛᴇʀꜱ.
+ɢᴜᴇꜱꜱ ᴛʜᴇ ᴄʜᴀʀᴀᴄᴛᴇʀ: ᴡʜᴇɴ ᴀɴ ɪᴍᴀɢᴇ ɪꜱ ᴘᴏꜱᴛᴇᴅ, ᴛʏᴘᴇ ᴛʜᴇ ᴄʜᴀʀᴀᴄᴛᴇʀ’ꜱ ɴᴀᴍᴇ ᴛᴏ ɢᴜᴇꜱꜱ. ʏᴏᴜ ʜᴀᴠᴇ 5 ᴍɪɴᴜᴛᴇꜱ ᴘᴇʀ ʀᴏᴜɴᴅ!
+ᴇᴀʀɴ ʀᴇᴡᴀʀᴅꜱ: ᴄᴏʀʀᴇᴄᴛ ɢᴜᴇꜱꜱᴇꜱ ᴇᴀʀɴ 20 ᴄᴏɪɴꜱ, ᴀɴᴅ ꜱᴛʀᴇᴀᴋꜱ (50 ᴏʀ 100 ᴄᴏʀʀᴇᴄᴛ ɢᴜᴇꜱꜱᴇꜱ) ɢɪᴠᴇ ʙᴏɴᴜꜱ ʀᴇᴡᴀʀᴅꜱ (1000 ᴏʀ 2000 ᴄᴏɪɴꜱ).
+ᴄᴏᴏʟᴅᴏᴡɴꜱ: ᴍᴀx 1,000,000 ɢᴜᴇꜱꜱᴇꜱ ʙᴇꜰᴏʀᴇ ᴀ 4-ʜᴏᴜʀ ᴄᴏᴏʟᴅᴏᴡɴ.
 
-**Need more help?** Contact [🥀 ʜᴇx | Uᴄʜɪʜᴀ.](https://t.me/uchiha_owner) or join [TEAM UCHIHA BOTS](https://t.me/SNOWY_HOMETOWN) for support!
-        """
+**Need more help?** Contact [🥀 ʜᴇx | Uᴄʜɪʜᴀ.](https://t.me/uchiha_owner) or join [˹ Uᴘᴘᴇʀ ᴍᴏᴏɴ ᴜᴘᴅᴀᴛᴇs ˼ 🎧](https://t.me/SNOWY_HOMETOWN) for support!
+        </blockquote>"""
         await callback_query.message.edit_text(
             text=help_text,
             parse_mode=enums.ParseMode.MARKDOWN,
@@ -55,12 +55,12 @@ Here's how to use the bot:
     async def back_to_start_callback(client: Client, callback_query):
         keyboard = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/uchiha_owner"),
+                InlineKeyboardButton("ᴅᴇᴠeʟᴏᴘᴇʀ 👨‍💻", url="https://t.me/uchiha_owner"),
                 InlineKeyboardButton("Update Channel 📢", url="https://t.me/dark_musictm")
             ],
             [
-                InlineKeyboardButton("Help ❓", callback_data="help_command"),
-                InlineKeyboardButton("Support 💡", url="https://t.me/snowy_hometown")
+                InlineKeyboardButton("ʜᴇʟᴘ ❓", callback_data="help_command"),
+                InlineKeyboardButton("˹ Uᴘᴘᴇʀ ᴍᴏᴏɴ ᴜᴘᴅᴀᴛᴇs ˼ 🎧", url="https://t.me/snowy_hometown")
             ]
         ])
         await callback_query.message.edit_media(
