@@ -30,7 +30,7 @@ def register(app):
     # Handle the Help button callback
     @app.on_callback_query(filters.regex("help_command"))
     async def help_callback(client: Client, callback_query):
-        help_text = """<blockquote>
+        help_text = """
 **Help - Anime Character Guessing Bot** 🛠️
 
 ʜᴇʀᴇ’ꜱ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴛʜᴇ ʙᴏᴛ:
@@ -41,7 +41,7 @@ def register(app):
 ᴄᴏᴏʟᴅᴏᴡɴꜱ: ᴍᴀx 1,000,000 ɢᴜᴇꜱꜱᴇꜱ ʙᴇꜰᴏʀᴇ ᴀ 4-ʜᴏᴜʀ ᴄᴏᴏʟᴅᴏᴡɴ.
 
 **Need more help?** Contact [🥀 ʜᴇx | Uᴄʜɪʜᴀ.](https://t.me/uchiha_owner) or join [˹ Uᴘᴘᴇʀ ᴍᴏᴏɴ ᴜᴘᴅᴀᴛᴇs ˼ 🎧](https://t.me/SNOWY_HOMETOWN) for support!
-        </blockquote>"""
+        """
         await callback_query.message.edit_text(
             text=help_text,
             parse_mode=enums.ParseMode.MARKDOWN,
