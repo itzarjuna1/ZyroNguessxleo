@@ -4,28 +4,29 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from cachetools import TTLCache, LRUCache
 
 API_ID = int(os.getenv("API_ID","22565342"))
-API_HASH = os.getenv("API_HASH", "75e035926f72f2f4155a6f5f6e64be03")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "7591372264:AAF565h2mFwJrpzNZdBpSO6KAh-zK5hMHXs")
+API_HASH = os.getenv("API_HASH", "")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://knight4563:knight4563@cluster0.a5br0se.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-GROUP_IDS = [int(gid.strip()) for gid in os.getenv("GROUP_IDS", "-1002881119599,-1002643544937 ").split(",")]
-START_PIC = os.getenv("START_IMG", "https://files.catbox.moe/6nl03c.jpg")
+GROUP_IDS = [int(gid.strip()) for gid in os.getenv("GROUP_IDS", "-1003228624224").split(",")]
+START_PIC = os.getenv("START_IMG", "https://files.catbox.moe/1hoql3.jpg")
 
-START_MESSAGE = """
-🌟 **Welcome to the Anime Character Guessing Bot!** 🌟
+START_MESSAGE = """<blockquote>
+🌟 Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ Aɴɪᴍᴇ Cʜᴀʀᴀᴄᴛᴇʀ Gᴜᴇssɪɴɢ Bᴏᴛ! 🌟
 
-Get ready to test your anime knowledge in an exciting guessing game! 🎮  
-Guess the anime characters from images in our supported groups and earn coins for every correct answer! 💰  
+💗Gᴇᴛ ʀᴇᴀᴅʏ ᴛᴏ ᴛᴇsᴛ ʏᴏᴜʀ ᴀɴɪᴍᴇ ᴋɴᴏᴡʟᴇᴅɢᴇ ɪɴ ᴀɴ ᴇxᴄɪᴛɪɴɢ ɢᴜᴇssɪɴɢ ɢᴀᴍᴇ! 🎮  
+🗻Gᴜᴇss ᴛʜᴇ ᴀɴɪᴍᴇ ᴄʜᴀʀᴀᴄᴛᴇʀs ғʀᴏᴍ ɪᴍᴀɢᴇs ɪɴ ᴏᴜʀ sᴜᴘᴘᴏʀᴛᴇᴅ ɢʀᴏᴜᴘs ᴀɴᴅ ᴇᴀʀɴ ᴄᴏɪɴs ғᴏʀ ᴇᴠᴇʀʏ ᴄᴏʀʀᴇᴄᴛ ᴀɴsᴡᴇʀ! 💰  
 
-This bot is **open-source**, built with ❤️ by the community for anime fans like you! Join the fun, track your streaks, and climb the leaderboards! 🏆  
+💞Tʜɪs ʙᴏᴛ ɪs ᴏᴘᴇɴ-sᴏᴜʀᴄᴇ, ʙᴜɪʟᴛ ᴡɪᴛʜ ❤️ ʙʏ ᴛʜᴇ ᴄᴏᴍᴍᴜɴɪᴛʏ ғᴏʀ ᴀɴɪᴍᴇ ғᴀɴs ʟɪᴋᴇ ʏᴏᴜ! Jᴏɪɴ ᴛʜᴇ ғᴜɴ, ᴛʀᴀᴄᴋ ʏᴏᴜʀ sᴛʀᴇᴀᴋs, ᴀɴᴅ ᴄʟɪᴍʙ ᴛʜᴇ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅs! 🏆  
 
-👇 **Use the buttons below to learn more or start playing!**
-- Use `/nguess` in a supported group to begin.
-- Join our update channel for news and updates!
-- Need help? Hit the Help button or contact the developer.
+👇 Usᴇ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴛᴏ ʟᴇᴀʀɴ ᴍᴏʀᴇ ᴏʀ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ!
+- 🥳Usᴇ /ɴɢᴜᴇss ɪɴ ᴀ sᴜᴘᴘᴏʀᴛᴇᴅ ɢʀᴏᴜᴘ ᴛᴏ ʙᴇɢɪɴ.
+- ☃️Jᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ғᴏʀ ɴᴇᴡs ᴀɴᴅ ᴜᴘᴅᴀᴛᴇs!
+- 💯Nᴇᴇᴅ ʜᴇʟᴘ? Hɪᴛ ᴛʜᴇ Hᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴏʀ ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ.
 
-**Bot Version**: `2.0`  
-Made by **Mr Zyro** | Powered by [TEAM ZYRO](https://t.me/Zyro_Network)
-"""
+🔍Bᴏᴛ Vᴇʀsɪᴏɴ: 𝟸.𝟶  
+🥀**ᴍᴀᴅᴇ ʙʏ💗:** [ ✦ sᴇɢғᴀᴜʟᴛᴇᴅ ❕](https://t.me/owner_of_itachi)
+| 🌙 Pᴏᴡᴇʀᴇᴅ ʙʏ [˹ Uᴘᴘᴇʀ ᴍᴏᴏɴ ᴜᴘᴅᴀᴛᴇs ˼ 🎧](https://t.me/dark_musictm)
+</blockquote>"""
 
 not_command_filter = filters.create(lambda _, __, msg: msg.text and not msg.text.startswith('/'))
 
