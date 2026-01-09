@@ -10,12 +10,12 @@ def register(app):
         # Define inline buttons
         keyboard = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/MrZyro"),
-                InlineKeyboardButton("Update Channel 📢", url="https://t.me/Zyro_Network")
+                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/uchiha_owner"),
+                InlineKeyboardButton("Update Channel 📢", url="https://t.me/dark_musictm")
             ],
             [
                 InlineKeyboardButton("Help ❓", callback_data="help_command"),
-                InlineKeyboardButton("Repo 💡", url="https://github.com/MrZyro/ZyroNguess")
+                InlineKeyboardButton("support 💡", url="https://t.me/snowy_hometown")
             ]
         ])
 
@@ -34,13 +34,13 @@ def register(app):
 **Help - Anime Character Guessing Bot** 🛠️
 
 Here's how to use the bot:
-1. **Join the Required Channel**: Ensure you've joined [TEAM ZYRO](https://t.me/Zyro_Network) to use the bot.
+1. **Join the Required Channel**: Ensure you've joined [TEAM UCHIHA BOTS](https://t.me/dark_musictm) to use the bot.
 2. **Start a Game**: Use `/nguess` in one of our supported groups to start guessing anime characters.
 3. **Guess the Character**: When an image is posted, type the character's name to guess. You have 5 minutes per round!
 4. **Earn Rewards**: Correct guesses earn 20 coins, and streaks (50 or 100 correct guesses) give bonus rewards (1000 or 2000 coins).
 5. **Cooldowns**: Max 1,000,000 guesses before a 4-hour cooldown.
 
-**Need more help?** Contact [Mr Zyro](https://t.me/MeZyro) or join [TEAM ZYRO](https://t.me/Zyro_Network) for support!
+**Need more help?** Contact [🥀 ʜᴇx | Uᴄʜɪʜᴀ.](https://t.me/uchiha_owner) or join [TEAM UCHIHA BOTS](https://t.me/SNOWY_HOMETOWN) for support!
         """
         await callback_query.message.edit_text(
             text=help_text,
@@ -55,12 +55,12 @@ Here's how to use the bot:
     async def back_to_start_callback(client: Client, callback_query):
         keyboard = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/MrZyro"),
-                InlineKeyboardButton("Update Channel 📢", url="https://t.me/Zyro_Network")
+                InlineKeyboardButton("Developer 👨‍💻", url="https://t.me/uchiha_owner"),
+                InlineKeyboardButton("Update Channel 📢", url="https://t.me/dark_musictm")
             ],
             [
                 InlineKeyboardButton("Help ❓", callback_data="help_command"),
-                InlineKeyboardButton("Repo 💡", url="https://github.com/MrZyro/ZyroNguess")
+                InlineKeyboardButton("Support 💡", url="https://t.me/snowy_hometown")
             ]
         ])
         await callback_query.message.edit_media(
