@@ -10,7 +10,7 @@ MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://knight4563:knight4563@cluster0
 GROUP_IDS = [int(gid.strip()) for gid in os.getenv("GROUP_IDS", "-1003228624224").split(",")]
 START_PIC = os.getenv("START_IMG", "https://files.catbox.moe/1hoql3.jpg")
 
-START_MESSAGE = """<blockquote>
+START_MESSAGE = """
 🌟 Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ Aɴɪᴍᴇ Cʜᴀʀᴀᴄᴛᴇʀ Gᴜᴇssɪɴɢ Bᴏᴛ! 🌟
 
 💗Gᴇᴛ ʀᴇᴀᴅʏ ᴛᴏ ᴛᴇsᴛ ʏᴏᴜʀ ᴀɴɪᴍᴇ ᴋɴᴏᴡʟᴇᴅɢᴇ ɪɴ ᴀɴ ᴇxᴄɪᴛɪɴɢ ɢᴜᴇssɪɴɢ ɢᴀᴍᴇ! 🎮  
@@ -26,7 +26,7 @@ START_MESSAGE = """<blockquote>
 🔍Bᴏᴛ Vᴇʀsɪᴏɴ: 𝟸.𝟶  
 🥀**ᴍᴀᴅᴇ ʙʏ💗:** [ ✦ sᴇɢғᴀᴜʟᴛᴇᴅ ❕](https://t.me/owner_of_itachi)
 | 🌙 Pᴏᴡᴇʀᴇᴅ ʙʏ [˹ Uᴘᴘᴇʀ ᴍᴏᴏɴ ᴜᴘᴅᴀᴛᴇs ˼ 🎧](https://t.me/dark_musictm)
-</blockquote>"""
+"""
 
 not_command_filter = filters.create(lambda _, __, msg: msg.text and not msg.text.startswith('/'))
 
